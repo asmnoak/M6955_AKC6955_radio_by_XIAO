@@ -25,7 +25,7 @@ M6955(AKC6955)は、FM/TV/MW/SW/LWオールバンド対応のDSPラジオICで�
 <a href="https://wiki.seeedstudio.com/jp/Seeeduino-XIAO/">XIAOの設定方法</a>
 </p>
 <p>
-<img src="./m6955_radio1.jpg" width="480" height="360">
+<img src="./blob/main/m6955_radio1.jpg" width="480" height="360">
 FM 80.4MHzを受信中
 </p>
 <p><strong>操作</strong><br>
