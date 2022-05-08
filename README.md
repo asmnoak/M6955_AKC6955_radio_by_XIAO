@@ -1,46 +1,46 @@
-<p><H3>M6955(AKC6955)�ɂ��I�[���o���h���W�I</H3></p>
+<p><H3>M6955(AKC6955)によるオールバンドラジオ</H3></p>
 <p>
-M6955(AKC6955)�́AFM/TV/MW/SW/LW�I�[���o���h�Ή���DSP���W�IIC�ł���BI2C�C���^�[�t�F�[�X�ŃR���g���[���ł���BArduino�Ƃ̑g�ݍ��킹����ʓI�ł��邪<br>
-�����ł́ASeeeduino XIAO���g�p�����B�f�[�^�V�[�g�́A<a href="https://www.aitendo.com/product/7012">������iDSP���W�I���W���[���j</a>���Q�l�ɂ���Ƃ悢�B<br>
-�Ȃ��A�`�b�v���̂�AliExpress�������\�ł���iSOP-24�p�b�P�[�W�Ȃ̂ŁA���낤���ăn���_�t���\�j�B<br>
+M6955(AKC6955)は、FM/TV/MW/SW/LWオールバンド対応のDSPラジオICである。I2Cインターフェースでコントロールできる。Arduinoとの組み合わせが一般的であるが<br>
+ここでは、Seeeduino XIAOを使用した。データシートは、<a href="https://www.aitendo.com/product/7012">こちら（DSPラジオモジュール）</a>を参考にするとよい。<br>
+なお、チップ自体はAliExpressから入手可能である（SOP-24パッケージなので、かろうじてハンダ付け可能）。<br>
 </p>
 
-<p><strong>����</strong><br>
- �E�^�N�g�X�C�b�`�P�ɂ�FM/MW/SW/LW�̃o���h�؂�ւ����\�iTV�͖��T�|�[�g�j�B<br>
- �E�^�N�g�X�C�b�`�Q�ɂĊe�o���h���̎�M�ǁi���g�����n�[�h�R�[�h���Ă����j�؂�ւ����\�B<br>
- �E���[�^���[�G���R�[�_�ɂĎ�M���g���̕ύX���\�B<br>
- �E�{�����[���ɂ�鉹�ʒ��߂��\�B<br>
- �E��M�o���h�Ǝ��g����OLED�ɕ\���\�B<br>
+<p><strong>特長</strong><br>
+ ・タクトスイッチ１にてFM/MW/SW/LWのバンド切り替えが可能（TVは未サポート）。<br>
+ ・タクトスイッチ２にて各バンド内の受信局（周波数をハードコードしておく）切り替えが可能。<br>
+ ・ロータリーエンコーダにて受信周波数の変更が可能。<br>
+ ・ボリュームによる音量調節が可能。<br>
+ ・受信バンドと周波数をOLEDに表示可能。<br>
 </p>
-<p><strong>H/W�\��</strong><br>
- �ESeeeduino XIAO - �R���g���[��<br>
- �ESD1306 128x64 OLED�\�����u�i�I�v�V�����j<br>
- �E�^�N�g�X�C�b�`�P�A�^�N�g�X�C�b�`�Q<br>
- �E�{�����[���i50K���j<br>
- �E���[�^���[�G���R�[�_<br>
- �EXtal���U��i32768Hz�j�A�R���f���T�A��R�ށi�f�[�^�V�[�g�Q�Ɓj
+<p><strong>H/W構成</strong><br>
+ ・Seeeduino XIAO - コントローラ<br>
+ ・SD1306 128x64 OLED表示装置（オプション）<br>
+ ・タクトスイッチ１、タクトスイッチ２<br>
+ ・ボリューム（50KΩ）<br>
+ ・ロータリーエンコーダ<br>
+ ・Xtal発振器（32768Hz）、コンデンサ、抵抗類（データシート参照）
 </p>
-<p><strong>Seeeduino XIAO�ɂ���</strong><br>
-500�~�ʃT�C�Y�̃R���p�N�g��Arduino�ł���B�ȉ����Q�l��Arduino IDE�ɐݒ���s�����Ƃŗ��p�ł���B<br>
-<a href="https://wiki.seeedstudio.com/jp/Seeeduino-XIAO/">XIAO�̐ݒ���@</a>
+<p><strong>Seeeduino XIAOについて</strong><br>
+500円玉サイズのコンパクトなArduinoである。以下を参考にArduino IDEに設定を行うことで利用できる。<br>
+<a href="https://wiki.seeedstudio.com/jp/Seeeduino-XIAO/">XIAOの設定方法</a>
 </p>
 <p>
-<img src="m6955_radio1.jpg" width="480" height="360">
-FM 80.4MHz����M��
+<img src="./m6955_radio1.jpg" width="480" height="360">
+FM 80.4MHzを受信中
 </p>
-<p><strong>����</strong><br>
- �EFM/MW/SW/LW�̃o���h�؂�ւ��i�^�N�g�X�C�b�`�j�B<br>
- �E�v���Z�b�g�������W�I�ǖ��͎�M���g���̐؂�ւ��i�^�N�g�X�C�b�`�j�B<br>
- �E���ʒ����i�{�����[���j�B<br>
- �E��M���g���̕ύX�i���[�^���[�G���R�[�_�j�B�Ȃ��A�ύX�̃X�e�b�v�̓o���h���ƂɌ��܂��Ă���B<br>
+<p><strong>操作</strong><br>
+ ・FM/MW/SW/LWのバンド切り替え（タクトスイッチ）。<br>
+ ・プリセットしたラジオ局又は受信周波数の切り替え（タクトスイッチ）。<br>
+ ・音量調整（ボリューム）。<br>
+ ・受信周波数の変更（ロータリーエンコーダ）。なお、変更のステップはバンドごとに決まっている。<br>
 
 </p>
-<p><strong>�ڑ�</strong><br>
-<p>�e�R���|�[�l���g�̐ڑ��͈ȉ��̒ʂ�B<br>
+<p><strong>接続</strong><br>
+<p>各コンポーネントの接続は以下の通り。<br>
 </p>
 <p>
-I2C�ڑ�&nbsp; M6955�ƕ\�����u�i�}���`�h���b�v�Őڑ��j
-��XIAO�����̃v���A�b�v�@�\�𗘗p���Ă���̂Ńv���A�b�v��R�͕s�v
+I2C接続&nbsp; M6955と表示装置（マルチドロップで接続）
+※XIAO内蔵のプルアップ機能を利用しているのでプルアップ抵抗は不要
 <table> 
 <tr>
 <td>I2C&nbsp;</td><td>XIAO</td>
@@ -60,27 +60,27 @@ I2C�ڑ�&nbsp; M6955�ƕ\�����u�i�}���`�h���b�v�Őڑ��j
 </table>
 </p>
 <p>
-�^�N�g�X�C�b�`�i�{�^���j
+タクトスイッチ（ボタン）
 <table> 
 <tr>
-<td>�{�^��&nbsp;</td><td>XIAO&nbsp;</td><td>�@�\</td>
+<td>ボタン&nbsp;</td><td>XIAO&nbsp;</td><td>機能</td>
 </tr>
 <tr>
-<td>BAND</td><td>D2</td><td>�o���h��؂�ւ�</td>
+<td>BAND</td><td>D2</td><td>バンドを切り替え</td>
 <tr>
 <tr>
-<td>STATION</td><td>D3</td><td>���W�I�ǂ��u���ցv�؂�ւ�</td>
+<td>STATION</td><td>D3</td><td>ラジオ局を「次へ」切り替え</td>
 <tr>
 <tr>
-<td>�\��</td><td>D1</td></td><td>����̓z�[���ǂֈړ�</td>
+<td>予備</td><td>D1</td></td><td>現状はホーム局へ移動</td>
 </tr>
 </table>
 </p>
 <p>
-���[�^���[�G���R�[�_
+ロータリーエンコーダ
 <table> 
 <tr>
-<td>���[�^���[�G���R�[�_&nbsp;</td><td>XIAO</td>
+<td>ロータリーエンコーダ&nbsp;</td><td>XIAO</td>
 </tr>
 <tr>
 <td>+</td><td>3V3</td>
@@ -97,37 +97,37 @@ I2C�ڑ�&nbsp; M6955�ƕ\�����u�i�}���`�h���b�v�Őڑ��j
 </table>
 </p>
 </p>
-<p><strong>�C���X�g�[��</strong><br>
+<p><strong>インストール</strong><br>
 <ol>
-<li>�R�[�h���AZIP�`���Ń_�E�����[�h</li>
-<li>ArduinoIDE�ɂ����ă��C�u������o�^</li>
-<li>ArduinoIDE����m6955_rot_oled_xiao_master.ino���J��</li>
-<li>�u���؁E�R���p�C���v�ɐ���������A��U�A�u���O��t���ĕۑ��v���s��<br>
-�i���C�u�������s���̃G���[���o����A�ǉ�����B�Ⴆ�΁ASD1306 OLED�\�����u�j
+<li>コードを、ZIP形式でダウンロード</li>
+<li>ArduinoIDEにおいてライブラリを登録</li>
+<li>ArduinoIDEからm6955_rot_oled_xiao_master.inoを開く</li>
+<li>「検証・コンパイル」に成功したら、一旦、「名前を付けて保存」を行う<br>
+（ライブラリが不足のエラーが出たら、追加する。例えば、SD1306 OLED表示装置）
 </li>
-<li>��ɏq�ׂ�H/W�\����p�ӂ��A�z����ڑ�����</li>
-<li>PC��USB�P�[�u���Őڑ�����B�K����COM�ԍ��ŔF�������iUSB�̃h���C�o���K�v�ȏꍇ����j</li>
-<li>�u�}�C�R���{�[�h�ɏ������ށv���s��</li>
-<li>�������݂���������΁A�\�����u��FM�ǎ�M���\�������i��������M���邽�߂ɂ́AFM�ǂ̎�M���g����ύX����K�v������j</li>
-<li>�Ȃ��A����̏󋵂��V���A�����j�^�ɕ\�������</li>
+<li>上に述べたH/W構成を用意し、配線を接続する</li>
+<li>PCとUSBケーブルで接続する。適当なCOM番号で認識される（USBのドライバが必要な場合あり）</li>
+<li>「マイコンボードに書き込む」を行う</li>
+<li>書き込みが成功すれば、表示装置にFM局受信が表示される（正しく受信するためには、FM局の受信周波数を変更する必要がある）</li>
+<li>なお、動作の状況がシリアルモニタに表示される</li>
 </li>
 </ol>
 </p>
 <p>
-<p><strong>�኱�̉��</strong><br>
-�E��M�o���hmode_set�ɂ��ẮAReg1�ɐݒ肷��B<br>
-�E��M���g��listen_freq�̓`�����l���ԍ��ɕϊ����āAReg2�ɐݒ肷��B�o���h���Ƃ̌v�Z�����f�[�^�V�[�g�Ɏ�����Ă���B<br>
-�E�e�^�N�g�X�C�b�`�ɂ��ẮA���荞�݋@�\�𗘗p���Ă���B��&nbsp;void mode_setting()<br>
+<p><strong>若干の解説</strong><br>
+・受信バンドmode_setについては、Reg1に設定する。<br>
+・受信周波数listen_freqはチャンネル番号に変換して、Reg2に設定する。バンドごとの計算式がデータシートに示されている。<br>
+・各タクトスイッチについては、割り込み機能を利用している。例&nbsp;void mode_setting()<br>
 </p>
 <p>
-<img src="m6955_radio2.jpg" width="400" height="400">
-���̔z�u�̗l�q�B�E��XIAO�A����M6955�B�d����AMS1117-3.3�ɂ��3.3V�ɕϊ����Ă���B
+<img src="./m6955_radio2.jpg" width="400" height="400">
+基板上の配置の様子。右がXIAO、左がM6955。電源はAMS1117-3.3により3.3Vに変換している。
 </p>
-<p><strong>���ӎ���</strong><br>
-�E�u�A�v���P�[�V�����m�[�g�v���Ȃ��̂ŁA�X�P�b�`�ɂ͎��s���낪�܂܂�Ă���B<br>
-�EAM�̎�M�ɂ̓o�[�A���e�i��ڑ�����K�v�����邪�AXIAO�Ƃ̈ʒu�֌W�œd�g���̉e�������Ȃ肠��̂ŗv���Ӂi�����P�[�X�ɓ����͖̂����j�B<br>
-�E�����́u�X�e���I�v�ɐݒ肵�Ă���̂ŁAL�`���l���AR�`���l���v�X�ɃX�s�[�J�[�i�C���z���j��ڑ����邪<strong>100��F����200��F���x�̃R���f���T�����</strong><br>
-�@GND�ɗ��Ƃ��i�X�s�[�J�[��GND�ɒ��ڐڑ������M6955������̂Œ��Ӂj�B<br>
-�@���m�����̏ꍇ�́A�X�P�b�`���u�t���v�iReg6�j�ɕύX����K�v������B���̎���L�`���l���AR�`���l���ԂɃX�s�[�J�[��ڑ�����B<br>
-�E���p�̍ۂ́A���ȐӔC�ł��y���݂��������B</p>
+<p><strong>注意事項</strong><br>
+・「アプリケーションノート」がないので、スケッチには試行錯誤が含まれている。<br>
+・AMの受信にはバーアンテナを接続する必要があるが、XIAOとの位置関係で電波干渉の影響がかなりあるので要注意（同じケースに入れるのは無理）。<br>
+・音声は「ステレオ」に設定しているので、Lチャネル、Rチャネル夫々にスピーカー（イヤホン）を接続するが<strong>100μFから200μF程度のコンデンサを介して</strong><br>
+　GNDに落とす（スピーカーをGNDに直接接続するとM6955が壊れるので注意）。<br>
+　モノラルの場合は、スケッチを「逆相」（Reg6）に変更する必要がある。この時はLチャネル、Rチャネル間にスピーカーを接続する。<br>
+・利用の際は、自己責任でお楽しみください。</p>
 </p>
