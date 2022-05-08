@@ -120,7 +120,7 @@ I2C接続&nbsp; M6955と表示装置（マルチドロップで接続）
 ・各タクトスイッチについては、割り込み機能を利用している。例&nbsp;void mode_setting()<br>
 </p>
 <p>
-<img src="./m6955_radio2.jpg" width="400" height="400">
+<img src="https://github.com/asmnoak/M6955_AKC6955_radio_by_XIAO/blob/main/m6955_radio2.JPG?raw=true" width="400" height="400">
 基板上の配置の様子。右がXIAO、左がM6955。電源はAMS1117-3.3により3.3Vに変換している。
 </p>
 <p><strong>注意事項</strong><br>
