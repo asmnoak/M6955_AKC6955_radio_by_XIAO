@@ -2,7 +2,7 @@
 <p>
 M6955(AKC6955)は、FM/TV/MW/SW/LWオールバンド対応のDSPラジオICである。I2Cインターフェースでコントロールできる。Arduinoとの組み合わせが一般的であるが<br>
 ここでは、Seeeduino XIAOを使用した。データシートは、<a href="https://www.aitendo.com/product/7012">こちら（DSPラジオモジュール）</a>を参考にするとよい。<br>
-なお、チップ自体はAliExpressから入手可能である（SOP-24パッケージなので、かろうじてハンダ付け可能）。<br>
+なお、チップ自体はAliExpressから入手可能である（SSOP-24パッケージなので、ハンダ付けは限界に近い）。<br>
 </p>
 
 <p><strong>特長</strong><br>
